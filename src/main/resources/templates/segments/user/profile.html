@@ -1,0 +1,23 @@
+<div th:fragment="profile">
+<div id="profileCnt"></div>
+
+
+<script>
+	
+	$(document).ready(function(){
+		console.log("profile.................");
+		$.ajax({
+			url : 'loadPage',
+			type: 'get',
+			data : {
+				'pageIs' : 'profileevent'
+			},
+			success : function(result){
+				console.log(result);
+				$("#profileCnt").html(result);
+			}
+		})
+	})
+	
+</script>
+</div>
